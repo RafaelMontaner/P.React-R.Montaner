@@ -1,17 +1,14 @@
 import './App.css';
-import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import MainRouter from './routes/MainRouter';
 
-
-function App() {
+const App = () => {
 
   return (
     <div className="App">
+      <MainRouter />
       
-      <NavBar />
-      <ItemListContainer greeting="¡Hola Coder, Bienvenido a PC World!"/>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import ProductsCard from './ProductsCard'
 
-const ItemListContainer = ({ productsData }) => {
+const ItemDetailContainer = ({ productsData }) => {
     return (
-    <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', gap:'20px', margin:'3rem'}}>
+    <div style={{display:'flex', justifyContent:'center', marginTop:'3rem' }}>
         {productsData.map((product) => {
     return <ProductsCard key={product.id} productData={product} />;
         })}
@@ -12,4 +12,4 @@ const ItemListContainer = ({ productsData }) => {
 };
 
 
-export default ItemListContainer
+export default ItemDetailContainer
