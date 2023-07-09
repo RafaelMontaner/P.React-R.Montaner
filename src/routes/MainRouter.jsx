@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar';
 
 
 
+
 const MainRouter = () => {
     return (
     <Router>
@@ -15,7 +16,8 @@ const MainRouter = () => {
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/category/:categoryId" element={<Category/>}  />
-            <Route path="/item/:itemId" element={<Item/>} />   
+            <Route path="/item/:itemId" element={<Item/>} /> 
+            
         </Routes>
     </Router> 
     );   

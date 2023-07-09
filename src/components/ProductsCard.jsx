@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-
+import CartButtons from './CartButtons';
 
 const ProductsCard = ({productData}) => {
+
+const BuyProducts = (productData) => {
+    console.log(productData)
+    
+}
+
+
     return (
         
-<Card style={{width: '20rem', borderColor: '#B58DB6', borderWidth:'5px' }}>
-    <Card.Img variant="top" src={productData.images[0]  } />
-    <Card.Body>
+<Card style={{ borderColor: '#B58DB6', borderWidth:'5px', fontSize: "15px",width: "22rem",
+        height: "80%", display: "flex", flexDirection: "column",}}>
+    <Card.Img  variant="top" src={productData.image  } />
+    <Card.Body >
         <Card.Title>{productData.title}</Card.Title>
         <Card.Text>
         {productData.description}
@@ -17,6 +25,8 @@ const ProductsCard = ({productData}) => {
             {productData.price}
         </Card.Text>
         <Link to={`/item/${productData.id}`} >Ver mas</Link>
+        
+        <CartButtons/>
     </Card.Body>
     </Card>
     )

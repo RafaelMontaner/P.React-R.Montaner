@@ -30,8 +30,12 @@ const NavBar = () => {
                     <Link to="/category/Ram">RAM</Link>
                 </NavDropdown.Item>
                 </NavDropdown>
+                
             </Nav>
-            <CartWidget />
+            <Link to={"/cart"} >
+            <CartWidget  />
+            </Link>
+            
             </Navbar.Collapse>
         </Container>
         </Navbar>
